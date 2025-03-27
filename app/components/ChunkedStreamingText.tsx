@@ -66,7 +66,7 @@ const ChunkedStreamingText: React.FC<ChunkedStreamingTextProps> = ({
   
   return (
     <div className="font-serif text-[rgb(13,60,38)] text-[22px]">
-      <div className="flex flex-wrap">
+      <div className="inline">
         {currentChunks.map((chunk, index) => (
           <motion.span
             key={index}
@@ -74,6 +74,7 @@ const ChunkedStreamingText: React.FC<ChunkedStreamingTextProps> = ({
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
             className="mr-1"
+            style={{ display: 'inline' }}
           >
             {chunk}
           </motion.span>
