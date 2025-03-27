@@ -4,7 +4,7 @@ import { useRef, useEffect, useState, FormEvent, ChangeEvent } from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import Link from 'next/link';
-import StreamingText from '../components/StreamingText';
+import ChunkedStreamingText from '../components/ChunkedStreamingText';
 
 interface Message {
   role: string;
@@ -237,7 +237,7 @@ export default function Chat() {
                                 <div className="w-2 h-2 bg-[#B8A18F] rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
                               </div>
                             ) : message.content ? (
-                              <StreamingText text={message.content} />
+                              <ChunkedStreamingText text={message.content} speed={300} />
                             ) : (
                               <div>{message.content}</div>
                             )}
