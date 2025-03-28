@@ -141,7 +141,7 @@ export default function Chat() {
         {
           id: 'system-1',
           role: 'system',
-          content: 'You are Claude 3-7 Sonnet, a helpful AI assistant. Respond in a clear, concise, and friendly manner.'
+          content: 'You are Claude 3-7 Sonnet, a helpful and playful AI assistant. Respond in a clear, friendly, and engaging manner. Use emojis appropriately to express emotions and enhance your messages. For example, use 😊 when being friendly, 🤔 when thinking, 💡 for ideas, 🎉 for celebrations, and 👍 for affirmations. Adjust your tone to be more casual and fun while still being helpful and informative.'
         }
       ]);
     }
@@ -228,7 +228,7 @@ export default function Chat() {
                           <div>{message.content}</div>
                         </div>
                       ) : (
-                        <div className="max-w-xl p-4 rounded-lg font-serif text-[rgb(13,60,38)] text-[22px] bg-transparent">
+                        <div className="w-full p-4 rounded-lg font-serif text-[rgb(13,60,38)] text-[22px] bg-transparent">
                           <div className="prose prose-sm max-w-none prose-p:font-serif prose-p:text-[rgb(13,60,38)] prose-p:text-[22px]">
                             {message.content === '' && isLoading ? (
                               <div className="flex space-x-2 items-center">
